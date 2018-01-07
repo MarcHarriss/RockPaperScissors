@@ -1,0 +1,39 @@
+<html>
+<body>
+
+<form>
+<input class="button" type="text" value="Rock paper scissors">
+<input id="submit" type="submit">
+</form>
+
+
+
+
+
+
+<script>
+var playerSelection = document.getElementById("submit");
+
+
+
+function computerPlay(){
+var myArray = [
+  "Rock",
+  "Paper",
+  "Scissors"
+];
+
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+return randomItem;
+}
+console.log(computerPlay());
+
+
+
+function oneRound(playerSelection, computerPlay) {
+
+}
+
+</script>
+</body>
+</html>
