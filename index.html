@@ -1,30 +1,48 @@
 <html>
 <body>
-
-<form>
-<input class="button" type="button" name="rock" type="submit">
-<input id="submit" type="submit">
-</form>
-
-
-
-
-
-
 <script>
-var playerSelection = document.getElementById("submit").select();
+//var playerSelection = prompt();
+//console.log(playerSelection);
+// var computerSelection = computerPlay();
+//console.log(computerPlay);
+
+const playerSelection = prompt();
+const computerSelection = computerPlay()
+console.log(playRound(playerSelection, computerSelection))
 
 
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === "Rock" && computerSelection === "Rock") {
+  return "Draw";
+  } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+  return "Computer wins";
+  } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+  return "Player wins";
+  } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+  return "Computer wins";
+  } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+  return "draw";
+  } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+  return "Player wins";
+  } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+  return "Computer wins";
+  } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+  return "Player wins";
+  } else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+  return "draw";
+  }
+}
+console.log(playRound())
 
 function computerPlay(){
-var myArray = [
-  "Rock",
-  "Paper",
-  "Scissors"
-];
-
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-return randomItem;
+  var myArray = [
+    "Rock",
+    "Paper",
+    "Scissors"
+  ];
+  var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+  return randomItem;
 }
 console.log(computerPlay());
 
