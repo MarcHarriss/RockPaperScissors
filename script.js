@@ -22,7 +22,6 @@ const computer = {
 
   set choice(random) {
     let num = Math.floor(Math.random() * 10);
-    let random;
     switch(num) {
       case 1:
       case 2:
@@ -42,6 +41,7 @@ const computer = {
     }
 
   }
+  
 }
 
 
