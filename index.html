@@ -4,18 +4,45 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<div class="jumbotron">
+<div class="container-fluid" style="min-height: 100%">
   <div class="row">
-    <div class="col-xs-12 text-center">
-      <h2> Choose your weapon </h2>
-      <button class="btn btn-primary" value="Rock" id="Rock">Rock</button>
-      <button class="btn btn-primary" value="Paper" id="Paper">Paper</button>
-      <button class="btn btn-primary" value="Scissors" id="Scissors">Scissors</button>
-      <p id="demo"></p>
+      <div class="col-xs-12 text-center">
+        <h1 class="text-success"> Rock Paper Scissors </h1>
+        <hr>
+        <h2> Choose your weapon </h2>
+        <button class="btn btn-primary" value="Rock" id="Rock">Rock</button>
+        <button class="btn btn-primary" value="Paper" id="Paper">Paper</button>
+        <button class="btn btn-primary" value="Scissors" id="Scissors">Scissors</button>
+
+        <div class="well paddingTop">
+          <h3 class="text-primary"> Scores </h3><hr>
+          <p>
+            <span class="text-primary">You: </span>
+            <span id="playerScore">0</span>
+            <span class="text-danger">Computers: </span>
+            <span id="computerScore">0</span>
+          </p>
+        </div>
+
+          <p id="ps" class="text-primary">Your choice:</p>
+          <p id="cs" class="text-danger">Computers Choice:</p>
+          <h2 id="roundResult">Round Result</h2>
+          <button id ="reset" class="bnt-inline btn btn-warning">Restart the game</button>
+          <hr>
+
+      </div>
+
+  </div>
+
+
+  <div id="footer" class="container-fluid text-center">
+    <div class="row">
+      <div class="col-12">
+        <p>created by <a href="#">Marc Harriss</a></p>
+      </div>
     </div>
   </div>
 </div>
-
 <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
